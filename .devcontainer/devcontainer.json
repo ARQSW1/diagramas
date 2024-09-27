@@ -1,6 +1,10 @@
 {
-  "image":"plantuml/plantuml:latest",
-  "postCreateCommand": "apt update && apt  -y install git-all  ",
+  
+  "build":{
+    "dockerfile":"Dockerfile"
+
+  },
+  "postCreateCommand": "apt update && apt -y install git-all  ",
   "customizations": {
     // Configure properties specific to VS Code.
     "vscode": {
