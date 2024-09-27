@@ -1,6 +1,6 @@
 {
   "image":"plantuml/plantuml:latest",
-  "postCreateCommand": "apt update && apt install git-all",
+  "postCreateCommand": "apt update && apt  -y install git-all  ",
   "customizations": {
     // Configure properties specific to VS Code.
     "vscode": {
