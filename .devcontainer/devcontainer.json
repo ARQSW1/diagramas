@@ -1,0 +1,28 @@
+{
+  
+  "build":{
+    "dockerfile":"Dockerfile"
+
+  },
+  "postCreateCommand": "apt update && apt -y install git-all  ",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "hediet.vscode-drawio",
+        "eamodio.gitlens",
+        "bierner.markdown-mermaid",
+        "jebbs.plantuml"
+      ],
+      "settings": {
+				"plantuml.exportFormat": "png", 				// Default export format
+				"plantuml.exportOutDir": "out", 			// Default export folder
+				"plantuml.diagramsRoot": "diagrams",
+				"plantuml.render": "Local",
+				"plantuml.jar": "/opt/plantuml.jar"
+			}
+    }
+  }
+}
